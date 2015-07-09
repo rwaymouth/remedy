@@ -38,9 +38,11 @@ main {
     }
 }
 
+$small: new-breakpoint(max-width 35em 4);
+
 [id="locations"] {
     padding: 1em 2em;
-    
+
     tr {
         border: 0.1em solid rgba(gray, 0.1);
     }
@@ -48,6 +50,7 @@ main {
     tr:nth-child(odd) {
         background: rgba(gray, 0.2);
     }
+
 }
 
 .location--button {

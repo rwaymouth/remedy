@@ -45,5 +45,5 @@ $('#modal--submit').on('click', function() {
   }
     locationData.locations.push(data);
     appendLocation([data]);
-    $('#locations table').trigger( "enhance.tablesaw" );
+    $('#locations table').table();
 })

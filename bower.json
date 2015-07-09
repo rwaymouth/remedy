@@ -1,0 +1,10 @@
+{
+  "name": "remedy",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "tablesaw": "~1.0.4",
+    "handlebars": "~3.0.3",
+    "object.observe": "~0.2.4"
+  }
+}

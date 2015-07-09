@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Remedy</title>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/tablesaw/dist/tablesaw.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+</head>
+
+<body>
+
+  <main>
+    <header>
+      <nav>
+        <ul class="main--nav">
+          <li><a href="/" class="nav--entry">Home</a></li>
+          <li><a href="#/locations" class="nav--entry">View Locations</a></li>
+          <li><a href="#/add-location" class="nav--entry">Add Location</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="locations">
+      <table cellspacing="0" cellpadding="0 class=" tablesaw tablesaw-stack " data-tablesaw-mode="stack ">
+          <thead>
+          <tr>
+            <th>Street</th>
+            <th>City/State</th>
+            <th>Zip</th>
+          </tr>
+          <thead>
+        <tbody>
+          <tr class="location--entry ">
+            <td>123 Fake Street</td>
+            <td>Fakeville, VA</td>
+            <td>22201</td>
+          </tr>
+          <tr class="location--entry ">
+            <td>222 Real Street</td>
+            <td>Realville, MO</td>
+            <td>22210</td>
+          </tr>
+          <tr class="location--entry ">
+            <td>1600 Pennsylvania Ave</td>
+            <td>Wasington, DC</td>
+            <td>20006</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="location--button ">
+        Add new Location
+      </button>
+    </section>
+
+    <section class="location--form hidden modal ">
+      <div class="modal--wrap">
+      <h3>
+        Enter the new location information.
+      </h3>
+        <div class="input--group">
+          <label for="street">Street</label>
+          <input type="text" id="street"/>
+        </div>
+        <div class="input--group">
+          <label for="cityState">City, State</label>
+          <input type="text" id="cityState"/>
+        </div>
+        <div class="input--group">
+          <label for="zip">Zip</label>
+          <input type="text" id="zip"/>
+        </div>
+      <button id="modal--submit" class="location--button">
+        Submit
+      </button>
+    </div>
+    </section>
+  </main>
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/respond/dest/respond.src.js"></script>
+  <script src="/bower_components/tablesaw/dist/tablesaw.js"></script>
+  <script src="/bower_components/handlebars/handlebars.js"></script>
+  <script src="/bower_components/object.observe/dist/object-observe.min.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js "></script>
+
+  <!-- endbuild -->
+</body>
+
+</html>

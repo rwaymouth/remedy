@@ -1,0 +1,9 @@
+{
+  "generator-react-webpack": {
+    "app-name": "remedy",
+    "architecture": false,
+    "styles-language": "scss",
+    "component-suffix": "js"
+  },
+  "generator-mocha": {}
+}

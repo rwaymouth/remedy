@@ -1,0 +1,75 @@
+@import './components/sanitize-css/sanitize';
+@import './components/bourbon/bourbon';
+@import './components/neat/neat';
+@import './components/bitters/base';
+
+
+// Vars
+$nav-color: #3D89FF;
+$hover: #FFE70D;
+
+main {
+    @include outer-container;
+}
+
+.main--nav {
+    display: flex;
+    background: $nav-color;
+
+    > * {
+        flex: 1 1 auto;
+        padding: 0.5em 1em;
+        text-align: center; 
+    }
+
+    a {
+        color: white;
+        font-weight: 700;
+        transition: 0.3s ease-in;
+        cursor: pointer;
+        display: block;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $hover;
+            text-decoration: underline;
+        }
+    }
+}
+
+[id="locations"] {
+    padding: 1em 2em;
+}
+
+.location--button {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transition: position 0.1s ease-out;
+    top: 0;
+    left: 0; 
+    background: rgba(gray, 0.3);
+}
+
+.modal--wrap {
+    @include outer-container;
+    position: absolute;
+    top: 0;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 40%;
+    background: white;
+    padding: 2.5em;
+    box-shadow: 0.3em 0.2em 1em rgba(black, 0.4);
+}

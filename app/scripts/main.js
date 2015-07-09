@@ -52,24 +52,27 @@ $('#modal--submit').on('click', function() {
   locationData.locations.push(data);
   appendLocation([data]);
   $('#locations table').table();
+  removeListen();
 });
-
-$('.location--remove').on('click', function() {
-  var entry = $(this).parents('.location--entry');
-  var key = $('.location--street > .tablesaw-cell-content', entry).html();
-  var data = locationData.locations;
-  var filtered = data.filter(function(entry) {
-    if (entry['street'] === key) {
-      return false;
+removeListen();
+function removeListen() {
+  $('.location--remove').on('click', function() {
+    var entry = $(this).parents('.location--entry');
+    var key = $('.location--street > .tablesaw-cell-content', entry).html();
+    var data = locationData.locations;
+    var filtered = data.filter(function(entry) {
+      if (entry['street'] === key) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+    locationData.locations = filtered;
+    entry.remove();
+    if (locationData.locations.length > 0) {
+      localStorage.locations = JSON.stringify(filtered);
     } else {
-      return true;
+      localStorage.clear(locations);
     }
   });
-  locationData.locations = filtered;
-  entry.remove();
-  if (locationData.locations.length > 0) {
-    localStorage.locations = JSON.stringify(filtered);
-  } else {
-    localStorage.clear(locations);
-  }
-});
+}

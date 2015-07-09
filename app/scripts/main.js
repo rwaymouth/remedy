@@ -7,7 +7,8 @@ var template = Handlebars.compile(location_markup);
 // });
 
 if (localStorage.locations) {
-  var locationData = {"locations": JSON.parse(localStorage.locations)};
+  var locationData = JSON.parse(localStorage.locations);
+  console.log(locationData);
 } else {
   var locationData = {
     "locations": [
@@ -15,6 +16,8 @@ if (localStorage.locations) {
     ]
   };
 }
+console.log(locationData);
+
 appendLocation(locationData['locations']);
 
 Object.observe(locationData.locations, function() {
@@ -70,7 +73,8 @@ function removeListen() {
     locationData.locations = filtered;
     entry.remove();
     if (locationData.locations.length > 0) {
-      localStorage.locations = JSON.stringify(filtered);
+      localStorage.locations = JSON.stringify({'locations': filtered});
+      console.log(localStorage.locations)
     } else {
       localStorage.clear(locations);
     }

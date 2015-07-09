@@ -7,7 +7,7 @@ var template = Handlebars.compile(location_markup);
 // });
 
 if (localStorage.locations) {
-  var locationData = JSON.parse(localStorage.locations);
+  var locationData = {"locations": JSON.parse(localStorage.locations)};
 } else {
   var locationData = {
     "locations": [

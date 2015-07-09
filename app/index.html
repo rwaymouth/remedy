@@ -28,7 +28,7 @@
         <ul class="main--nav">
           <li><a href="/" class="nav--entry">Home</a></li>
           <li><a href="#/locations" class="nav--entry">View Locations</a></li>
-          <li><a href="#/add-location" class="nav--entry">Add Location</a></li>
+          <li><a href="#/add-location" class="nav--entry location--button">Add Location</a></li>
         </ul>
       </nav>
     </header>
@@ -40,23 +40,27 @@
             <th>Street</th>
             <th>City/State</th>
             <th>Zip</th>
+            <th> Actions </th>
           </tr>
           <thead>
         <tbody>
           <tr class="location--entry ">
-            <td>123 Fake Street</td>
+            <td class="location--street">123 Fake Street</td>
             <td>Fakeville, VA</td>
             <td>22201</td>
+            <td><button class="location--remove">Delete</button>
           </tr>
           <tr class="location--entry ">
-            <td>222 Real Street</td>
+            <td class="location--street">222 Real Street</td>
             <td>Realville, MO</td>
             <td>22210</td>
+            <td><button class="location--remove">Delete</button>
           </tr>
           <tr class="location--entry ">
-            <td>1600 Pennsylvania Ave</td>
+            <td class="location--street">1600 Pennsylvania Ave</td>
             <td>Wasington, DC</td>
             <td>20006</td>
+            <td><button class="location--remove">Delete</button>
           </tr>
         </tbody>
       </table>
